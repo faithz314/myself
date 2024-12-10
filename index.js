@@ -1,18 +1,19 @@
-  function showContent(tabId) {
-    // Hide all content divs
-    var contentDivs = document.querySelectorAll('.content');
-    contentDivs.forEach(function(div) {
-      div.classList.remove('active');
-    });
+// Select all the tab buttons
+const tabButtons = document.querySelectorAll('.tab-button');
 
-    // Activate the selected content div
-    var selectedDiv = document.getElementById(tabId);
-    selectedDiv.classList.add('active');
+// Select all the tab content panes
+const tabPanes = document.querySelectorAll('.tab-pane');
 
-    // Optional: Update tab styles to indicate active tab
-    var tabs = document.querySelectorAll('.tab');
-    tabs.forEach(function(tab) {
-      tab.classList.remove('active');
+// Add event listener to each tab button
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove the 'active' class from all tab buttons and content panes
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabPanes.forEach(pane => pane.classList.remove('active'));
+
+        // Add 'active' class to the clicked tab and the corresponding content pane
+        button.classList.add('active');
+        const targetTab = button.getAttribute('data-tab');
+        document.querySelector(`.${targetTab}`).classList.add('active');
     });
-    event.target.classList.add('active');
-  }
+});

@@ -1,53 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <title> FZ </title>
-  
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   
+   
+    <title> Myself </title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+      body, html{
+        font-family: 'Montserrat';
+        background-color: rgb(15, 34, 44);
+        color: white;
+      }
+
+      .box{
+        font-family: 'Montserrat';
+        background-color: rgb(15, 34, 44);
+        color: white;
+        width: 700px;
+        height: 50%;
+        padding: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /*aligns the body to the center of the page, vertically */
+        align-items: flex-start; /* aligns each item in the body in a left-alignment */
+        
+        border: 2px solid #e455c5; /* 2px solid border with pink color */
+        border-radius: 5px; /* Rounded corners */
+      }
+
+      /* Tabs Container */
+      .tabs-container {
+          max-width: 800px;
+          margin: 0 auto;
+          background-color: #fff;
+          border-radius: 5px;
+          border-color: white;
+
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Tab Navigation */
+      .tab-box{
+        border-radius: 3px;
+        border-color: white;
+        /* background-color: rgb(212, 17, 17); */
+        padding-bottom: 20px;
+      }
+
+      .tabs {
+          display: flex;
+
+          /* background-color: #ffffff; */
+          /* border-top-left-radius: 5px; */
+          border-top-right-radius: 5px;
+          border-color: white;
+      }
+
+      .tab-button {
+          flex: 1;
+          padding: 20px;
+          margin: 20px;
+          color: white;
+          background-color: inherit;
+          border: none;
+          cursor: pointer;
+          text-align: center;
+          font-size: 16px;
+          transition: background-color 0.3s;
+          border-radius: 10px;
+          font-family: 'Montserrat';
+
+      }
+
+      .tab-button:hover {
+          background-color: #e455c5;
+      }
+
+      .tab-button.active {
+          background-color: #e455c5;
+          font-weight: bold;
+      }
+
+      /* Tab Content */
+      .tab-content {
+          padding: 20px;
+          margin: 20px;
+          font-family: 'Montserrat';
+
+      }
+
+      .tab-pane {
+          display: none;
+      }
+
+      .tab-pane.active {
+          display: block;
+      }
 
 
+      /* Media Queries for Responsive Design */
+      @media (max-width: 768px) {
+          .box {
+              width: 90%; /* Makes the box width smaller on smaller screens */
+              height: auto; /* Adjust height based on content */
+              padding: 15px;
+          }
+          .tab-button {
+              font-size: 14px; /* Smaller font size on small screens */
+          }
+      }
+
+      @media (max-width: 480px) {
+          .box {
+              width: 95%; /* Even smaller box on very small screens */
+              height: auto;
+          }
+          .tab-button {
+              font-size: 12px; /* Even smaller font size */
+              padding: 8px; /* Smaller padding for the buttons */
+          }
+      }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+  <h1> HEY! I'm Faith. </h1>
+  <p> OR + CS @ Rice. Interested in data + development + design ! </p>
+
+  <p> My important links: </p>
+  <ul class="links">
+    <li><a href="mailto:fz28@rice.edu?subject=Subject%20Text&body=Body%20Content" target="_blank"> Email </a></li>
+    <li><a href="https://github.com/faithz314"> Github </a></li>
+    <li><a href="https://www.linkedin.com/in/faith-z/" target="_blank"> LinkedIn </a></li>
+    <li><a href="https://docs.google.com/document/d/1tl1YIDR04u6o4dpJbwTZ0sTDb3_kJhJwcSUqKj4XbzU/export?format=pdf" target="_blank"> Resume </a></li>
+
+  </ul>
 
 
-
-  <body>
-
-    <div class="box">
-
-    <div class="header">
-        <h1 class="header-text">HEY! I'm Faith Zhang. </h1>
+  <div class= "tab-box">
+    <div class="tabs">
+        <button class="tab-button" data-tab="tab1"> Projects </button>
+        <button class="tab-button" data-tab="tab2"> About Me </button>
+        <button class="tab-button" data-tab="tab3"> Design! </button>
     </div>
 
-    <div id="description-container">
-        <p> <b>OR+ CS @ Rice University. </b> Summer 2024: ML Research @ Rice Department of Statistics </p> 
-        <p> Currently playing a long game of catch up. Involved with Rice {Apps, Design, Coffeehouse, & INFORMS}. </p>
+    <div>
+        <!-- Tab content panes -->
+        <div class="tab-pane tab1">
+            <h2> Projects </h2>
+        </div>
+        <div class="tab-pane tab2">
+            <h2> About Me </h2>
 
-        
-        <div class= 'contacts'>
-            <a href="mailto:fz28@rice.edu?subject=Hello&body=This%20is%20a%20test%20message"> Email</a>
-            <a href="https://www.linkedin.com/in/faith-z-760882248/" target="_blank"> LinkedIn</a>
-            <a href="https://github.com/faithz314" target="_blank"> GitHub</a>
-            <a href="https://drive.google.com/file/d/1M1ixzLQn1pwJmx4dkRc5vR3cxS41nJ1z/view?usp=sharing" target="_blank"> Resume </a>
-            <a href="https://faithzhng.wixsite.com/home" target="_blank"> Design </a>
+            <img src="C:\Users\fz28\Documents\myself\IMG_2390-FaithZhang1-ezgif.com-webp-to-jpg-converter.jpg" width="300" height="300" style="object-fit: cover; border-radius: 10px; margin-top: 20px;">
+
+
+            <p> Hello! I'm a student at Rice University
+              studying Operations Research & Computer Science. <p>
+
+
+              </p> I was awarded
+              the Summmer Undergraduate Research Fellowship last summer 2024,
+              and I worked with the Department of Statistics to build a ML model. 
+              I'm currently seeking SWE + DS roles. A brief summary of my life
+              is detailed below :D
+            </p>
+
+            
+
 
         </div>
-       
+        <div class="tab-pane tab3">
+            <h2> Design </h2>
+        </div>
     </div>
 
-    <!-- <div id="projects" class="content active">
-        <p> Projects </p>
 
-            <p>School</p>
-            <p>Non-School</p>
-
-    </div> -->
+  </div> 
   </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
 
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove the 'active' class from all tab buttons and content panes
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
 
-
-    <script type="module" src="index.js"></script>
-  </body>
+                    // Add 'active' class to the clicked tab and the corresponding content pane
+                    button.classList.add('active');
+                    const targetTab = button.getAttribute('data-tab');
+                    document.querySelector(`.${targetTab}`).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
 </html>
