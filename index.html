@@ -15,26 +15,33 @@
         background-color: rgb(15, 34, 44);
         color: white;
       }
-
-      .box{
+            .box {
         font-family: 'Montserrat';
         background-color: rgb(15, 34, 44);
         color: white;
         width: 700px;
-        height: 50%;
+        max-height: 80vh; /* Allow box to grow but limit to 80% of the viewport height */
         padding: 20px;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%); 
+        transform: translate(-50%, -50%);
         display: flex;
         flex-direction: column;
-        justify-content: center; /*aligns the body to the center of the page, vertically */
-        align-items: flex-start; /* aligns each item in the body in a left-alignment */
-        
-        border: 2px solid #e455c5; /* 2px solid border with pink color */
-        border-radius: 5px; /* Rounded corners */
+        justify-content: flex-start; /* Aligns the content at the top of the box */
+        align-items: flex-start; /* Aligns the items to the left */
+
+        border: 2px solid #e455c5;
+        border-radius: 5px;
+        overflow-y: auto; /* Makes the box scrollable vertically when content exceeds the max-height */
       }
+
+            /* Hide scrollbar in webkit browsers */
+      .box::-webkit-scrollbar {
+        width: 0;  /* Removes scrollbar width */
+        height: 0; /* Removes horizontal scrollbar if present */
+      }
+
 
       /* Tabs Container */
       .tabs-container {
