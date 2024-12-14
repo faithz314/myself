@@ -78,6 +78,8 @@
           /* border-top-left-radius: 5px; */
           border-top-right-radius: 5px;
           border-color: white;
+          align-items: row;
+          justify-content: space-evenly;
       }
 
       .tab-button {
@@ -163,9 +165,8 @@
 
   <div class="box">
   <h1> HEY! I'm Faith. </h1>
-  <p> OR + CS @ Rice. Interested in data + development + design ! </p>
+  <p> OR + CS @ Rice. </p>
 
-  <p> My important links: </p>
   <ul class="links">
     <li><a href="mailto:fz28@rice.edu?subject=Subject%20Text&body=Body%20Content" target="_blank"> Email </a></li>
     <li><a href="https://github.com/faithz314" target="_blank"> Github </a></li>
@@ -177,15 +178,64 @@
 
   <div class= "tab-box">
     <div class="tabs">
-        <button class="tab-button" data-tab="tab1"> Projects </button>
-        <button class="tab-button" data-tab="tab2"> About Me </button>
+        <button class="tab-button active" data-tab="tab1"> Projects </button>
+        <button class="tab-button " data-tab="tab2"> About Me </button>
         <button class="tab-button" data-tab="tab3"> Design! </button>
     </div>
 
     <div>
         <!-- Tab content panes -->
-        <div class="tab-pane tab1">
-            <h2> Projects </h2>
+        <div class="tab-pane tab1 active">
+            
+            <h2 style="text-align: center;"> Projects </h2>
+
+
+            <div class = "timestamps">
+                <h2> <a href = "https://surf24-zzo2czsdh3rjcihc27hz9v.streamlit.app/" target = "_blank"> SURF 2024 </a> </h2>
+                <p> A logistic regression machine learning model to predict the development of acute
+                    kidney injury (AKI) 24-72 hours after heart surgery. </p>
+            </div>
+            
+
+            <div class = "timestamps">
+                <h2> Sprout </h2>
+                <p> A mental health app based on positive psychology. </p>
+            </div>
+
+            <div class = "timestamps">
+                <h2> When3Meet </h2>
+                <p> A better When2Meet with a stronger user interface and more 
+                    optimal scheduling using mixed-integer linear programming.
+                </p>
+            </div>
+
+
+            <div class = "timestamps">
+                <h2> RiceApps </h2>
+
+                <h4> Texas Hearing Institute </h4>
+                <p> An app to track positive/negative behaviors among students at 
+                    the Texas Hearing Institute!
+                </p>
+                <h4> Rice Dance Theater Ticketing </h4>
+                <p> 
+                    2 apps to help dancers manage attendence & ticket sales for Rice Dance Theater events.
+                </p>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
         <div class="tab-pane tab2">
             <div style="text-align: center;">
