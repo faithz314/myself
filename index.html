@@ -31,7 +31,7 @@
         justify-content: flex-start; /* Aligns the content at the top of the box */
         align-items: flex-start; /* Aligns the items to the left */
 
-        border: 2px solid #e455c5;
+        border: 2px solid pink;
         border-radius: 5px;
         overflow-y: auto; /* Makes the box scrollable vertically when content exceeds the max-height */
       }
@@ -41,6 +41,16 @@
         width: 0;  /* Removes scrollbar width */
         height: 0; /* Removes horizontal scrollbar if present */
       }
+
+        .links a, a {
+        color: pink;           
+        text-decoration: none; /
+        }
+
+        .links a:hover {
+        color: darkpink;     
+        }
+
 
 
       /* Tabs Container */
@@ -58,7 +68,6 @@
       .tab-box{
         border-radius: 3px;
         border-color: white;
-        /* background-color: rgb(212, 17, 17); */
         padding-bottom: 20px;
       }
 
@@ -73,7 +82,7 @@
 
       .tab-button {
           flex: 1;
-          padding: 20px;
+          padding: 15px 20px; 
           margin: 20px;
           color: white;
           background-color: inherit;
@@ -84,16 +93,18 @@
           transition: background-color 0.3s;
           border-radius: 10px;
           font-family: 'Montserrat';
+          box-sizing: border-box;
 
       }
 
       .tab-button:hover {
-          background-color: #e455c5;
+          background-color: pink;
       }
 
       .tab-button.active {
-          background-color: #e455c5;
+          background-color: pink;
           font-weight: bold;
+          color: rgb(15, 34, 44);
       }
 
       /* Tab Content */
@@ -110,6 +121,17 @@
 
       .tab-pane.active {
           display: block;
+      }
+
+      .timestamps{
+        border: 2px solid pink;
+        border-radius: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        margin: 10px;
+
+
       }
 
 
@@ -146,7 +168,7 @@
   <p> My important links: </p>
   <ul class="links">
     <li><a href="mailto:fz28@rice.edu?subject=Subject%20Text&body=Body%20Content" target="_blank"> Email </a></li>
-    <li><a href="https://github.com/faithz314"> Github </a></li>
+    <li><a href="https://github.com/faithz314" target="_blank"> Github </a></li>
     <li><a href="https://www.linkedin.com/in/faith-z/" target="_blank"> LinkedIn </a></li>
     <li><a href="https://docs.google.com/document/d/1tl1YIDR04u6o4dpJbwTZ0sTDb3_kJhJwcSUqKj4XbzU/export?format=pdf" target="_blank"> Resume </a></li>
 
@@ -166,28 +188,102 @@
             <h2> Projects </h2>
         </div>
         <div class="tab-pane tab2">
-            <h2> About Me </h2>
-
-            <img src="C:\Users\fz28\Documents\myself\IMG_2390-FaithZhang1-ezgif.com-webp-to-jpg-converter.jpg" width="300" height="300" style="object-fit: cover; border-radius: 10px; margin-top: 20px;">
+            <div style="text-align: center;">
+            <h2 > Helloooooo, my name is Faith Zhang! </h2>
+            <img src="IMG_2390-FaithZhang1-ezgif.com-webp-to-jpg-converter.jpg" alt="Faith Zhang" style="margin: 20px auto; width: 200px; height: 200px; object-fit: cover; border-radius: 100px;">
+        </div>
 
 
             <p> Hello! I'm a student at Rice University
               studying Operations Research & Computer Science. <p>
 
 
-              </p> I was awarded
-              the Summmer Undergraduate Research Fellowship last summer 2024,
+              </p> Most recently, I was awarded
+              the Summmer Undergraduate Research Fellowship @ Rice last summer 2024,
               and I worked with the Department of Statistics to build a ML model. 
-              I'm currently seeking SWE + DS roles. A brief summary of my life
+              I'm currently seeking SWE + DS + PM + UI/UX roles (really a swiss army knife here). A brief summary of my life
               is detailed below :D
             </p>
+
+
+            <div class = "timestamps">
+                <h2> Rice </h2>
+                <h4> 2023 -> 2026 </h4>
+                <ul>
+                    <li> worked & researched at several places </li>
+                    <li> discovered STEM </li>
+                    <ul>
+                        <li> built my first app! </li>
+                        <li> conducted my first user survey! </li>
+                        <li> survived data structures & algorithms... barely</li>
+                    </ul>
+                    <li> make lattes as a KOC @ Rice Coffeehouse </li>
+                    <li> optimization problems @ Rice INFORMS </li>
+                    <li> draw monthly chalkboard art @ Wiess residential college </li>
+                    <li> served as an O-Week advisor </li>
+                    <li> dressed up for halloween for the first time in 7 years </li>
+                    <li> picked up photography, ui/ux design, project management, & </li>
+                    <li> flip flopped between impostor syndrome and a superiority complex, but on average, gave everything my best shot!</li>
+
+                </ul>
+                
+
+
+            </div>
+
+            <div class = "timestamps">
+                <h2> Adolescence </h2>
+                <h4> 2019 -> 2023 </h4>
+
+                <ul>
+                    <li> almost followed the professional violinist route </li>
+                    <li> had an incredible time playing chamber music with the La Vida Quartet</li>
+                    <li> won 3 gold & 2 silver bids to the national PF Debate Tournament of Champions </li>
+                    <li> served as an art director for 3 separate literary magazines </li>
+                    <li> maybe should've lived a little (?), but loved being involved </li>
+                    <li> made some lifelong friendships </li>
+                    <li> drew a lot of anime fan art </li>
+
+                </ul>
+
+
+            </div>
+
+            <div class = "timestamps">
+                <h2> Sentience -> 8th Grade </h2>
+                <h4> 2004 -> 2019 </h4>
+                <ul>
+                    <li> generally unaware of the concept of locking in </li>
+                    <li> moved from Arkansas -> Maryland @ age 8 </li>
+                    <li> nigahiga & winx club season 2 episode 3 part 1 YouTube video enjoyer</li>
+                </ul>
+
+            </div>
 
             
 
 
         </div>
         <div class="tab-pane tab3">
-            <h2> Design </h2>
+            <div style="text-align: center;">
+            <h2> Did someone say UI/UX?! </h2>
+         </div>
+
+        <p> Although I spend a lot of time developing, I also love to design! I serve as an
+            executive officer @ Rice Design, Rice University's one and only premier design club. 
+            Because Rice doesn't have a strong support system for design resources, Rice Design provides
+            workshops, coffee chats, portfolio reviews, and even a semester-long consulting program
+            to help students interested in UI/UX (and design in general) receive the support they need.
+        </p>
+
+
+        <p>
+            If you're interested in seeing my person design work, you can check out my entirely separate
+            design portfolio <a href="https://faithzhang.framer.website/" target="_blank"> HERE! </a>
+        </p>
+
+
+
         </div>
     </div>
 
