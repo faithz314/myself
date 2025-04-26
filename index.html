@@ -200,9 +200,21 @@
     <li><a href="mailto:fz28@rice.edu?subject=Subject%20Text&body=Body%20Content" target="_blank"> Email </a></li>
     <li><a href="https://github.com/faithz314" target="_blank"> Github </a></li>
     <li><a href="https://www.linkedin.com/in/faith-z/" target="_blank"> LinkedIn </a></li>
-    <li><a href="https://docs.google.com/document/d/1qAFKH9xY1YcQnftf5Cqhi8kXEbZ9gqMxJ4W7bwArMHc/export?format=pdf
-        " target="_blank"> Resume </a></li>
-
+    <li>
+        <a href="#" onclick="checkPassword()">Resume</a>
+      </li>
+      
+      <script>
+      function checkPassword() {
+        const password = prompt("Enter password to access the resume:");
+        if (password === "yourpassword123") { // <-- set your password here
+          window.open("https://docs.google.com/document/d/1qAFKH9xY1YcQnftf5Cqhi8kXEbZ9gqMxJ4W7bwArMHc/export?format=pdf", "_blank");
+        } else {
+          alert("Incorrect password. Access denied.");
+        }
+      }
+      </script>
+      
   </ul>
 
 
@@ -399,7 +411,7 @@
                     // Add 'active' class to the clicked tab and the corresponding content pane
                     button.classList.add('active');
                     const targetTab = button.getAttribute('data-tab');
-                    document.querySelector(`.${targetTab}`).classList.add('active');
+                    docu-ment.querySelector(`.${targetTab}`).classList.add('active');
                 });
             });
         });
